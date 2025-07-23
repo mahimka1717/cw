@@ -21,6 +21,7 @@ export default defineConfig({
         agency: path.resolve(__dirname, 'ai-mobile-agency.html'),
         findings: path.resolve(__dirname, 'ai-mobile-findings.html'),
         machines: path.resolve(__dirname, 'ai-mobile-machines.html'),
+        index: path.resolve(__dirname, 'index.html'),
       }
     }
   },
