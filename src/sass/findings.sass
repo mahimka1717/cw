@@ -1,35 +1,11 @@
 @use 'variables' as *
 @use 'mixins' as *
 @use 'fonts.sass'
+@use 'segment.sass'
+@use 'hero.sass'
+@use 'donat.sass'
+@use 'linechart.sass'
+@use 'multibar.sass'
 
-.article *,
-.article *::before,
-.article *::after
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-
-.article
-    display: flex
-    flex-direction: row
-    justify-content: center
-    width: 100%
-    -webkit-font-smoothing: antialiased
-    position: relative
+.section
     background: $bg-color
-
-
-    .article-wrapper
-        position: relative
-        width: 100%
-        max-width: 1260px
-        padding: 20px
-        @include mbp-down(sm)
-            height: unset
-            padding: 1rem
-
-        .chapter
-            position: relative
-            &[data-id="0"]
-                @include mbp-down(lg)
-                    padding-top: 10rem

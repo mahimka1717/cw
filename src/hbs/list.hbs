@@ -1,0 +1,18 @@
+
+<div class="custom-list-component" data-id="{{id}}">
+  <h3 class="custom-list-title">{{title}}</h3>
+  <ul class="custom-list">
+    {{#if deviders}}
+      <hr class="custom-list-divider">
+    {{/if}}
+    {{#each elements}}
+      <li>
+        <img src="{{icon}}" alt="">
+        <span>{{text}}</span>
+      </li>
+      {{#if ../deviders}}
+        <hr class="custom-list-divider">
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>

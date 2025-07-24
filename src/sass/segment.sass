@@ -1,0 +1,36 @@
+@use 'variables' as *
+@use 'mixins' as *
+
+.segment
+    h3.title
+        font-family: $font-headings
+        color: $secondary-color
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: 34px
+        letter-spacing: -1.5px
+        margin-bottom: 24px
+
+    .description
+        color: #000
+        font-family: $font-headings
+        font-size: 22px
+        font-style: normal
+        font-weight: 400
+        line-height: 26px
+        margin-bottom: 24px
+
+    .children
+        p
+            color: $primary-color
+            // font-family: $font-primary
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 25.2px
+            margin-top: unset
+            margin-bottom: 8px
+
+    .segment + .segment
+        margin-top: 40px

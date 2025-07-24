@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { renderLineChart } from './linechart.js';
+import { renderMultibar } from './multibar.js';
 
 export let smoother;
 
@@ -130,21 +132,69 @@ function ftFixSmoother() {
 
 
 
+
 }
 
 
 
+
+const lineChartData = {
+    title: "Q. How do you measure content success?",
+    id: "linechart",
+    elements: [
+        {val: 38, text: "5 (High)", color: "#00f"},
+        {val: 9, text: "4", color: "#00f"},
+        {val: 22, text: "3", color: "#00f"},
+        {val: 16, text: "2", color: "#00f"},
+        {val: 16, text: "1 (Low)", color: "#00f"}
+    ]
+};
+
+function initLineChart() {
+  const el = document.querySelector('.linechart-component');
+  if (el) {
+    renderLineChart(el, lineChartData);
+  }
+}
+
+const multibarData = {
+    title: "Q. Rate the effectiveness of events as a distribution channel",
+    id: "multibar",
+    legend: [
+        {text: "5 (High)", color: "#0000FF"},
+        {text: "4", color: "#6666FF"},
+        {text: "3", color: "#A6A6FF"},
+        {text: "2", color: "#CCCCFF"},
+        {text: "1 (Low)", color: "#F0EDED"},
+        {text: "Don’t produce", color: "#FFFFFF"}
+    ],
+    elements: [
+        {text: "Articles", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "Video", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "White papers", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "In-person events", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "Virtual events", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "Podcasts", vals:[0, 0, 0, 0, 0, 0]},
+        {text: "Data visualisation", vals:[0, 0, 0, 0, 0, 0]}
+    ]
+};
+
+function initMultibar() {
+  const el = document.querySelector('.multibar-component');
+  if (el) {
+    renderMultibar(el, multibarData);
+  }
+}
 
 const init = () => {
     
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     gsap.config({
         force3D: !isIOS,
-        // nullTargetWarn: false,
     });
-
     // createScrollSmoother();
-
+    initLineChart();
+    initMultibar();
 }
 
 if (document.readyState === 'loading') {

@@ -1,0 +1,9 @@
+<div class="segment" {{#if dataId}}data-id="{{dataId}}"{{/if}}>
+  <h2 class="title">{{title}}</h2>
+  {{#if description}}
+    <p class="description">{{description}}</p>
+  {{/if}}
+  {{#if children}}
+    <div class="children">{{{children}}}</div>
+  {{/if}}
+</div>

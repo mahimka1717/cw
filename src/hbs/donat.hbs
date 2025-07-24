@@ -1,0 +1,16 @@
+<div class="donat-component" data-id="{{id}}">
+  {{#if title}}
+    <h3 class="donat-title">{{title}}</h3>
+  {{/if}}
+  <div class="donat-legend">
+    {{#each elements}}
+      <div class="donat-legend__item">
+        <span class="donat-legend__color" style="background: {{color}}"></span>
+        <span class="donat-legend__text">{{text}} (<b>{{val}}%</b>)</span>
+      </div>
+    {{/each}}
+  </div>
+  <svg class="donat-chart" width="194" height="194" viewBox="0 0 194 194">
+    <g></g>
+  </svg>
+</div>
