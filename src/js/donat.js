@@ -46,7 +46,7 @@ export function renderDonatChart(el, data) {
     seg.setAttribute('d', pathData);
     seg.setAttribute('fill', item.color);
     seg.setAttribute('stroke', '#fff');
-    seg.setAttribute('stroke-width', '2');
+    seg.setAttribute('stroke-width', '0.5');
     svg.appendChild(seg);
     startAngle = endAngle;
   });

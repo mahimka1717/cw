@@ -1,4 +1,4 @@
-<div class="linechart-component" data-id="{{id}}"></div>
+<div class="linechart-component" data-id="{{id}}">
   {{#if title}}
     <h3 class="linechart-title">{{title}}</h3>
   {{/if}}
@@ -7,10 +7,12 @@
       <div class="linechart-list__item">
         <span class="linechart-list__text">{{text}}</span>
         <div class="linechart-list__barwrap">
+          <span class="linechart-line"></span>
           <span class="linechart-list__bar" style="width: {{val}}%; background: {{color}}"></span>
         </div>
         <span class="linechart-list__val">{{val}}%</span>
       </div>
     {{/each}}
   </div>
+</div>
 </div>

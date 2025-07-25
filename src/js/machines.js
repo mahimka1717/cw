@@ -32,7 +32,7 @@ const listData2 = {
 };
 
 const listData3 = {
-    title: "So ask yourself",
+    title: "",
     id: "3",
     deviders: true,
     elements: [

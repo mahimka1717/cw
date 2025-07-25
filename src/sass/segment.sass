@@ -2,7 +2,7 @@
 @use 'mixins' as *
 
 .segment
-    h3.title
+    h2.title
         font-family: $font-headings
         color: $secondary-color
         font-size: 30px
@@ -19,6 +19,7 @@
         font-style: normal
         font-weight: 400
         line-height: 26px
+        margin-top: 0
         margin-bottom: 24px
 
     .children
@@ -34,3 +35,30 @@
 
     .segment + .segment
         margin-top: 40px
+
+    &[data-id="1-4"],
+    &[data-id="1-6"],
+    &[data-id="1-7"]
+        h2.title
+            color: #fff
+
+    &[data-id="1-6"]
+        margin-bottom: 48px
+
+    &[data-id="1-9"],
+    &[data-id="2-3"],
+    &[data-id="3-3"],
+    &[data-id="3-9"]
+        .title
+            color: rgba(245, 92, 28, 1)
+
+    &[data-id="1-9"]
+        .children
+            p
+                margin-bottom: 28px
+
+    &[data-id="3-1"]
+        h2.title
+            padding-top: 1.5rem
+            max-width: 270px
+            border-top: 0.5px solid #00f

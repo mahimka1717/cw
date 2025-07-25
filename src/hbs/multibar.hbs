@@ -1,7 +1,10 @@
-<div class="multibar-component" data-id="{{id}}"></div>
+<div class="multibar-component" data-id="{{id}}">
   {{#if title}}
     <h3 class="multibar-title">{{title}}</h3>
   {{/if}}
+
+<div class="multibar-box">
+
   <div class="multibar-legend">
     {{#each legend}}
       <div class="multibar-legend__item">
@@ -15,11 +18,16 @@
       <div class="multibar-list__item">
         <span class="multibar-list__text">{{text}}</span>
         <div class="multibar-list__barwrap">
-          {{#each vals}}
-            <span class="multibar-list__bar" style="width: {{this}}%; background: {{../legend@[ @index ].color}}; border-radius: 50%"></span>
+          {{#each (reverse vals)}}
+            <span class="multibar-list__bar" style="width: {{percent289 this}}%; background: {{legendColor ../../legend @index}}; border-radius: 50%"></span>
           {{/each}}
         </div>
       </div>
     {{/each}}
   </div>
+
+</div>
+
+
+</div>
 </div>

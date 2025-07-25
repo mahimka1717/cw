@@ -1,10 +1,22 @@
 // Linechart renderer
 export function renderLineChart(el, data) {
+
+
+ 
+
   if (!el) return;
+
+
+
+  
   el.querySelector('.linechart-title').textContent = data.title;
   const list = el.querySelector('.linechart-list');
   list.innerHTML = '';
   data.elements.forEach(item => {
+
+
+    console.log('renderLineChart item:', item);
+
     const itemDiv = document.createElement('div');
     itemDiv.className = 'linechart-list__item';
     // Text
@@ -29,5 +41,10 @@ export function renderLineChart(el, data) {
     itemDiv.appendChild(barWrap);
     itemDiv.appendChild(valSpan);
     list.appendChild(itemDiv);
+
+
+    
   });
+
+   
 }

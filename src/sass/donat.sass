@@ -1,6 +1,22 @@
 .donat-component
-  margin: 0 0 24px 0
+  margin: 0 0 72px 0
   padding: 0
+  display: flex
+  justify-content: flex-start
+  gap: 24px
+
+  svg
+    height: auto
+
+
+  &[data-id="2"]
+    margin-bottom: 0
+
+h3.donat-title
+  font-size: 14px !important
+  line-height: 14px !important
+  font-weight: 600  !important
+  margin-bottom: 12px !important
 
 .donat-title
   font-size: 20px
@@ -9,6 +25,7 @@
 
 .donat-legend
   display: flex
+  flex-direction: column
   gap: 16px
   margin-bottom: 16px
 
@@ -19,15 +36,17 @@
   color: #333
 
 .donat-legend__color
-  width: 16px
-  height: 16px
-  border-radius: 50%
+  width: 12px
+  height: 8px
+  border-radius: 4px
   margin-right: 8px
   display: inline-block
 
 .donat-legend__text
   flex: 1
+  font-size: 12px
 
 .donat-chart
   display: block
   margin: 0 auto
+  min-width: 194px

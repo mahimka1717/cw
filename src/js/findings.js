@@ -12,6 +12,15 @@ Handlebars.registerPartial('donat', donatTemplateSource);
 Handlebars.registerPartial('linechart', lineChartTemplateSource);
 Handlebars.registerPartial('multibar', multybarTemplateSource);
 
+Handlebars.registerHelper('legendColor', function(legend, idx) {
+  return legend[idx] && legend[idx].color;
+});
+Handlebars.registerHelper('percent289', function(val) {
+  return (val / 279 * 100).toFixed(2);
+});
+Handlebars.registerHelper('reverse', function(array) {
+  return array.slice().reverse();
+});
 
 
 
@@ -46,7 +55,7 @@ const donatData3 = {
         {val: 24, text: "Improving ROI", color: "#6666FF"},
         {val: 19, text: "Integrating AI", color: "#A6A6FF"},
         {val: 17, text: "Deploying new formats", color: "#CCCCFF"},
-        {val: 12, text: "Leveraging events", color: "#fff"},
+        {val: 12, text: "Leveraging events", color: "#F0EDED"},
     ]
 }
 
@@ -170,6 +179,11 @@ const lineChartData6 = {
 
 
 
+
+
+
+
+
 const multybarData1 = {
     title: "Q. Rate the effectiveness of events as a distribution channel",
     id: "1",
@@ -182,17 +196,15 @@ const multybarData1 = {
         {text: "Don’t produce", color: "#F0EDED"}
     ],
     elements: [
-        {text: "Articles", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "Video", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "White papers", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "In-person events", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "Virtual events", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "Podcasts", vals:[0, 0, 0, 0, 0, 0]},
-        {text: "Data visualisation", vals:[0, 0, 0, 0, 0, 0]}
+        {text: "Articles", vals:[0, 19, 36, 130, 228, 279]},
+        {text: "Video", vals:[0, 0, 30, 92, 188, 279]},
+        {text: "White papers", vals:[0, 48, 107, 187, 257, 279]},
+        {text: "In-person events", vals:[0, 17, 26, 34, 132, 279]},
+        {text: "Virtual events", vals:[54, 78, 132, 217, 269, 279]},
+        {text: "Podcasts", vals:[0, 94, 149, 228, 268, 279]},
+        {text: "Data visualisation", vals:[78, 88, 122, 160, 238, 279]}
     ]
 }
-
-
 
 
 
@@ -203,9 +215,9 @@ const template = Handlebars.compile('{{> list}}');
 const html5 = template(listData5);
 const html6 = template(listData6);
 
-
 document.querySelector('.list[data-id="5"]').innerHTML = html5;
 document.querySelector('.list[data-id="6"]').innerHTML = html6;
+
 
 
 
@@ -235,8 +247,6 @@ if (donatEl7) renderDonatChart(donatEl7, donatData7);
 
 
 
-
-
 const linechartTemplate = Handlebars.compile('{{> linechart}}');
 const htmlLinechart1 = linechartTemplate(lineChartData1);
 const htmlLinechart2 = linechartTemplate(lineChartData2);
@@ -253,34 +263,10 @@ document.querySelector('.linechart[data-id="4"]').innerHTML = htmlLinechart4;
 document.querySelector('.linechart[data-id="5"]').innerHTML = htmlLinechart5;
 document.querySelector('.linechart[data-id="6"]').innerHTML = htmlLinechart6;
 
-const linechartEl1 = document.querySelector('.linechart-component[data-id="1"]');
-if (linechartEl1) renderLineChart(linechartEl1, lineChartData1);
-
-const linechartEl2 = document.querySelector('.linechart-component[data-id="2"]');
-if (linechartEl2) renderLineChart(linechartEl2, lineChartData2);
-
-const linechartEl3 = document.querySelector('.linechart-component[data-id="3"]');
-if (linechartEl3) renderLineChart(linechartEl3, lineChartData3);
-
-const linechartEl4 = document.querySelector('.linechart-component[data-id="4"]');
-if (linechartEl4) renderLineChart(linechartEl4, lineChartData4);
-
-const linechartEl5 = document.querySelector('.linechart-component[data-id="5"]');
-if (linechartEl5) renderLineChart(linechartEl5, lineChartData5);
-
-const linechartEl6 = document.querySelector('.linechart-component[data-id="6"]');
-if (linechartEl6) renderLineChart(linechartEl6, lineChartData6);
 
 
 
 
 const multybarTemplate = Handlebars.compile('{{> multibar}}');
 const htmlMultybar1 = multybarTemplate(multybarData1);
-
-console.log(htmlMultybar1);
-
 document.querySelector('.multybar[data-id="1"]').innerHTML = htmlMultybar1;
-const multybarEl1 = document.querySelector('.multibar-component[data-id="1"]');
-if (multybarEl1) {
-    renderMultyBarChart(multybarEl1, multybarData1);
-}

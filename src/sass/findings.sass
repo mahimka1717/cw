@@ -3,9 +3,93 @@
 @use 'fonts.sass'
 @use 'segment.sass'
 @use 'hero.sass'
+@use 'list.sass'
 @use 'donat.sass'
 @use 'linechart.sass'
 @use 'multibar.sass'
 
-.section
+.section[data-id="3-1"],
+.section[data-id="3-3"],
+.section[data-id="3-6"]
     background: $bg-color
+.section[data-id="3-2"],
+.section[data-id="3-4"],
+.section[data-id="3-5"],
+.section[data-id="3-7"],
+.section[data-id="3-8"],
+.section[data-id="3-9"]
+    background: #fff
+
+
+.graphics[data-id="3-8"]
+    padding: 18px
+    background: #F2E0CC
+
+
+
+
+.title
+    color: #00F
+    font-family: $font-headings
+    font-size: 50px
+    font-style: normal
+    font-weight: 400
+    line-height: 57px
+    letter-spacing: -2.5px
+
+.section .graphics
+    grid-row: 2 / span 1
+
+.section .inner
+    padding-bottom: 24px
+    padding-top: 24px
+
+.image
+    width: 100vw
+    height: 300px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    &[data-id="2"]
+        background-image: url('/images/art2_d.jpg')
+    &[data-id="3"]
+        background-image: url('/images/art3_d.jpg')
+        width: 100%
+        margin-bottom: 24px
+    &[data-id="4"]
+        background-image: url('/images/art4_d.jpg')
+        width: 100%
+        margin-top: 24px
+
+
+.values
+    display: flex
+    justify-content: space-around
+    margin: 0 0 72px 0
+    .value
+        div:first-child
+            color: rgba(245, 92, 28, 1)
+            font-family: $font-headings
+            font-size: 52px
+            font-style: normal
+            font-weight: 400
+            line-height: 52px
+            letter-spacing: -2.6px
+            text-align: center
+            span
+                // font-family: Urbanist
+                font-size: 32px
+                font-style: normal
+                font-weight: 600
+                line-height: 24px
+
+        div:last-child
+            color: #000
+            text-align: center
+            // font-family: Urbanist
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            line-height: 12px
+            width: 106px

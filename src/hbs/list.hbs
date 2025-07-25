@@ -7,8 +7,10 @@
     {{/if}}
     {{#each elements}}
       <li>
-        <img src="{{icon}}" alt="">
-        <span>{{text}}</span>
+        <div class="custom-list-icon">
+          <img src="{{icon}}" alt="">
+        </div>
+        <span>{{{text}}}</span>
       </li>
       {{#if ../deviders}}
         <hr class="custom-list-divider">

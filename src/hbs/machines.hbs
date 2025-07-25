@@ -5,7 +5,7 @@
     <div class="hero-bg-image" data-id="1"></div>
 </section>
 
-<section class="section">
+<section class="section" data-id="1-1">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
@@ -15,7 +15,7 @@
 
                 <article class="content">
                     {{> segment
-                    dataId="1"
+                    dataId="1-1"
                     title=""
                     size=1
                     description="A fundamental shift is afoot in marketing, but most companies are yet to respond or
@@ -34,7 +34,7 @@
 
                 <aside class="graphics">
                     {{> segment
-                    dataId="2"
+                    dataId="1-2"
                     title="The Rise of Generative AI Search"
                     size=1
                     description=""
@@ -61,7 +61,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" data-id="1-2">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
@@ -74,7 +74,7 @@
 
 
                     {{> segment
-                    dataId="3"
+                    dataId="1-3"
                     title="Marketing to Machines: Where to Start?"
                     size=1
                     description=""
@@ -92,9 +92,9 @@
                     }}
                 </article>
 
-                <aside class="graphics">
+                <aside class="graphics" data-id="1-2">
                     {{> segment
-                    dataId="4"
+                    dataId="1-4"
                     title="Optimising for Machines: Practical Steps"
                     size=1
                     description=""
@@ -110,15 +110,18 @@
     </div>
 </section>
 
-
 <section class="section">
+    <div class="image" data-id="1"></div>
+</section>
+
+<section class="section" data-id="1-3">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
             <div class="inner">
                 <article class="content">
                        {{> segment
-                    dataId="5"
+                    dataId="1-5"
                     title="Your Website Is Now a Signal to the Machines"
                     size=1
                     description=""
@@ -130,15 +133,15 @@
                     }}
                 </article>
 
-                <aside class="graphics">
+                <aside class="graphics" data-id="1-3">
                     {{> segment
-                    dataId="6"
+                    dataId="1-6"
                     title="How marketers ranked the effectiveness of content formats"
                     size=1
                     description=""
                     children='
                     <figure class="barchart_1" data-id="1">
-                        <caption>Humans</caption>
+                        <span>Humans</span>
 
 <svg width="350" height="204" viewBox="0 0 350 204" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -157,7 +160,7 @@
 <path d="M295.565 83.8196H337.68" stroke="#FAAA89" stroke-width="7" stroke-linecap="round"/>
 
 
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="25.0625" y="16.2">In-person events&#10;</tspan><tspan x="83.0469" y="52.2">Video&#10;</tspan><tspan x="74.3047" y="88.2">Articles&#10;</tspan><tspan x="21.5352" y="124.2">Data visualisation&#10;</tspan><tspan x="43.3555" y="160.2">White papers&#10;</tspan><tspan x="66.0312" y="196.2">Podcasts</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="25.0625" y="16.2">In-person events&#10;</tspan><tspan x="83.0469" y="52.2">Video&#10;</tspan><tspan x="74.3047" y="88.2">Articles&#10;</tspan><tspan x="21.5352" y="124.2">Data visualisation&#10;</tspan><tspan x="43.3555" y="160.2">White papers&#10;</tspan><tspan x="66.0312" y="196.2">Podcasts</tspan></text>
 
 </svg>
 
@@ -166,16 +169,16 @@
                     }}
 
                     {{> segment
-                    dataId="7"
+                    dataId="1-7"
                     title="Content formats the machine reads"
                     size=1
                     description=""
                     children='
                     <figure class="barchart_1" data-id="2">
-                        <caption>Machines</caption>
+                        <span>Machines</span>
 
 <svg width="350" height="201" viewBox="0 0 350 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="25.0625" y="14.2">In-person events&#10;</tspan><tspan x="83.0469" y="50.2">Video&#10;</tspan><tspan x="74.3047" y="86.2">Articles&#10;</tspan><tspan x="21.5352" y="122.2">Data visualisation&#10;</tspan><tspan x="43.3555" y="158.2">White papers&#10;</tspan><tspan x="66.0312" y="194.2">Podcasts</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="25.0625" y="14.2">In-person events&#10;</tspan><tspan x="83.0469" y="50.2">Video&#10;</tspan><tspan x="74.3047" y="86.2">Articles&#10;</tspan><tspan x="21.5352" y="122.2">Data visualisation&#10;</tspan><tspan x="43.3555" y="158.2">White papers&#10;</tspan><tspan x="66.0312" y="194.2">Podcasts</tspan></text>
 
 <path d="M137.012 0.184814C131.042 0.184814 126.186 5.02114 126.186 10.9664C126.186 16.9117 131.027 21.748 137.012 21.748H338.972C344.958 21.748 349.799 16.9271 349.799 10.9664C349.799 5.00573 344.958 0.184814 338.972 0.184814H137.012Z" stroke="white" stroke-width="0.25"/>
 <path d="M137.012 36.0105C131.027 36.0105 126.186 40.8314 126.186 46.7921C126.186 52.7528 131.027 57.5737 137.012 57.5737H338.972C344.958 57.5737 349.799 52.7528 349.799 46.7921C349.799 40.8314 344.958 36.0105 338.972 36.0105H137.012Z" stroke="white" stroke-width="0.25"/>
@@ -197,15 +200,14 @@
     </div>
 </section>
 
-
-<section class="section">
+<section class="section" data-id="1-4">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
             <div class="inner">
                 <article class="content">
                        {{> segment
-                        dataId="8"
+                        dataId="1-8"
                         title="Back to the Future: Legacy Media’s Quiet Return"
                         size=1
                         description=""
@@ -218,19 +220,19 @@
 
                 <aside class="graphics">
                     <figure class="barchart_2" data-id="1">
-                        <caption>Q. Rate the effectiveness of legacy media as a distribution channel</caption>
+                        <span>Q. Rate the effectiveness of legacy media as a distribution channel</span>
                         <svg width="349" height="355" viewBox="0 0 349 355" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line y1="332.5" x2="349" y2="332.5" stroke="black"/>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="305" y="352.2">5 (High)</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="244" y="352.2">4</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="172" y="352.2">3</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="102" y="352.2">2</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="7" y="352.2">1 (low)</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="313" y="97.2">22%</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="237" y="10.2">28%</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="164" y="94.2">22%</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="96" y="212.2">9%</tspan></text>
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="12" letter-spacing="0em"><tspan x="15" y="97.2">19%</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="305" y="352.2">5 (High)</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="244" y="352.2">4</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="172" y="352.2">3</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="102" y="352.2">2</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="7" y="352.2">1 (low)</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="313" y="97.2">22%</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="237" y="10.2">28%</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="164" y="94.2">22%</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="96" y="212.2">9%</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="15" y="97.2">19%</tspan></text>
 <path d="M313.919 322.468C313.919 327.182 317.741 331 322.459 331C327.178 331 331 327.182 331 322.468V109.647C331 104.933 327.178 101.115 322.459 101.115C317.741 101.115 313.919 104.933 313.919 109.647V322.468Z" fill="#0000FF"/>
 <path d="M236.969 322.468C236.969 327.182 240.791 331 245.509 331C250.228 331 254.05 327.182 254.05 322.468V31.5324C254.05 26.8183 250.228 23 245.509 23C240.791 23 236.969 26.8183 236.969 31.5324V322.468Z" fill="#6666FF"/>
 <path d="M164.844 322.468C164.844 327.182 168.666 331 173.384 331C178.103 331 181.925 327.182 181.925 322.468V109.647C181.925 104.933 178.103 101.115 173.384 101.115C168.666 101.115 164.844 104.933 164.844 109.647V322.468Z" fill="#CFCFFF"/>
@@ -243,40 +245,55 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" data-id="1-5">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
             <div class="inner">
                 <article class="content">
                           {{> segment
-                        dataId="9"
+                        dataId="1-9"
                         title="A New Formula for Measuring ROI?"
                         size=1
                         description=""
                         children='
                         <p>In this new era, B2B marketing looks like this:</p>
                         <svg width="368" height="232" viewBox="0 0 368 232" fill="none" xmlns="http://www.w3.org/2000/svg">
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="0" y="92.4">+</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="1" y="184.4">=</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="43" y="46.4">B2M</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="43" y="138.4">H</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="42" y="230.4">ROI</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="18" letter-spacing="0em"><tspan x="192" y="26.9">Business to Machines&#xa0;</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="18" letter-spacing="0em"><tspan x="192" y="117.9">Humans</tspan></text>
-<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-family="Urbanist" font-size="18" letter-spacing="0em"><tspan x="192" y="215.9">Sales + Impact</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="0" y="92.4">+</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="1" y="184.4">=</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="43" y="46.4">B2M</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="43" y="138.4">H</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="64" font-weight="300" letter-spacing="0em"><tspan x="42" y="230.4">ROI</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="18" letter-spacing="0em"><tspan x="192" y="26.9">Business to Machines&#xa0;</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="18" letter-spacing="0em"><tspan x="192" y="117.9">Humans</tspan></text>
+<text fill="#F55C1C" xml:space="preserve" style="white-space: pre" font-size="18" letter-spacing="0em"><tspan x="192" y="215.9">Sales + Impact</tspan></text>
 </svg>
                         '
                         }}
                 </article>
 
                 <aside class="graphics">
+
+
+{{> segment
+    dataId="1-10"
+    title=""
+    size=1
+    description=""
+    children='
+<p>So ask yourself</p>
 <div class="list" data-id="3"></div>
-
-
-
 <p>You may be surprised by the answers today. Brands willing to seriously explore these questions now can get ahead of the game in understanding the changing world of search. </p>
 <p>In doing so, and by intentionally training the machines, companies can create a new source of competitive advantage.</p>
+
+    '}}
+
+           
+
+
+
+
+
 
                 </aside>
             </div>
@@ -284,26 +301,22 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" data-id="1-6">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
             <div class="inner">
-                <article class="content">
-   
-                </article>
-
-                <aside class="graphics">
-
-                </aside>
+  
+                <ul class="links">
+                    <li>
+                        1. <a href="https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025#:~:text=by%202028%2c%20brands%27%20organic%20search,organic%20search%20to%20drive%20sales." target="_blank" rel="noopener noreferrer">https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025#:~:text=by%202028%2c%20brands%27%20organic%20search,organic%20search%20to%20drive%20sales.\</a>
+                    </li>
+                    <li>
+                        2. <a href="https://arxiv.org/pdf/2311.09735" target="_blank" rel="noopener noreferrer">https://arxiv.org/pdf/2311.09735</a>
+                    </li>
+                </ul>
+    
             </div>
         </div>
     </div>
-</section>
-
-
-<section class="section">
-    1.
-    https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025#:~:text=by%202028%2c%20brands%27%20organic%20search,organic%20search%20to%20drive%20sales.\
-    2. https://arxiv.org/pdf/2311.09735
 </section>

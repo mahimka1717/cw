@@ -6,6 +6,7 @@ export function renderMultibar(el, data) {
   }
   const legend = el.querySelector('.multibar-legend');
   legend.innerHTML = '';
+
   data.legend.forEach(item => {
     const legendItem = document.createElement('div');
     legendItem.className = 'multibar-legend__item';
