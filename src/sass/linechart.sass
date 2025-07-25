@@ -1,9 +1,18 @@
+@use 'variables' as *
+@use 'mixins' as *
+  
 .linechart-component
   margin: 0 0 72px 0
   padding: 0
+  @include mbp-down(md)
+    margin: 0 0 24px 0
 
-  // &[data-id="3"]
-  //   margin-bottom: 0
+  &[data-id="1"],
+  &[data-id="3"],
+  &[data-id="4"],
+  &[data-id="6"]
+    @include mbp-down(md)
+      margin-bottom: 0
   &[data-id="5"]
     .linechart-list__text
       min-width: 80px

@@ -1,3 +1,6 @@
+@use 'variables' as *
+@use 'mixins' as *
+  
 .custom-list-component
   margin: 0 0 24px 0
   padding: 0
@@ -8,6 +11,9 @@
       font-size: 18px !important
       line-height: 18px !important
       margin-bottom: 24px !important
+
+  &[data-id="5"]
+    margin-bottom: 0
 
 
 h3.custom-list-title

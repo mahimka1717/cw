@@ -1,8 +1,9 @@
 <div class="donat-component" data-id="{{id}}">
-  <div class=""donat-box>
+  
   {{#if title}}
     <h3 class="donat-title">{{title}}</h3>
   {{/if}}
+  <div class="donat-box">
   <div class="donat-legend">
     {{#each elements}}
       <div class="donat-legend__item">
@@ -11,8 +12,9 @@
       </div>
     {{/each}}
   </div>
-  </div>
+  
   <svg class="donat-chart" width="194" height="194" viewBox="0 0 194 194">
     <g></g>
   </svg>
+  </div>
 </div>

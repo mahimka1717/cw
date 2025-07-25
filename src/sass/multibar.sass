@@ -1,5 +1,13 @@
+@use 'variables' as *
+@use 'mixins' as *
+  
 .multibar-component
   margin-bottom: 72px
+  @include mbp-down(md)
+    margin: 0 0 24px 0
+  
+  &[data-id="1"]
+    margin-bottom: 0
 
 h3.multibar-title
   font-size: 14px !important

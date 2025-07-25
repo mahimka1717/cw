@@ -38,9 +38,13 @@
     display: flex
     color: white
     justify-content: flex-end
+    @include mbp-down(md)
+        flex-direction: column
 
     span
         font-size: 14px
+        @include mbp-down(md)
+            margin-bottom: 24px
 
 .barchart_2
     span
@@ -87,6 +91,8 @@
         font-size: 12px
         line-height: 14px
         margin-bottom: 0px
+        word-break: break-word
+        margin-bottom: 8px
 
 .section .graphics
     grid-row: 2 / span 1
@@ -94,6 +100,46 @@
 .section .inner
     padding-bottom: 24px
     padding-top: 24px
+
+
+.section[data-id="1-1"] .graphics
+    @include mbp-down(md)
+        width: 100vw
+        margin-left: -2rem
+        margin-right: -2rem
+        padding: 2rem
+        margin-top: 24px
+        background: #fff
+
+.section[data-id="1-2"] .graphics
+    @include mbp-down(md)
+        width: 100vw
+        margin-left: -2rem
+        margin-right: -2rem
+        padding: 2rem
+        margin-top: 24px
+
+.section[data-id="1-3"] .graphics
+    @include mbp-down(md)
+        width: 100vw
+        margin-left: -2rem
+        margin-right: -2rem
+        padding: 2rem
+        margin-top: 24px
+
+.section[data-id="1-1"] .inner 
+    @include mbp-down(md)
+        padding-bottom: 0px
+    // padding-top: 24px
+
+.section[data-id="1-2"] .inner 
+    @include mbp-down(md)
+        padding-top: 0px
+        padding-bottom: 0px
+    // padding-top: 24px
+
+
+
 
 .image
   width: 100vw
@@ -103,4 +149,10 @@
   background-repeat: no-repeat
   &[data-id="1"]
     background-image: url('/images/art1_d.jpg')
+
+
+.svg-formula
+    @include mbp-down(md)
+        width: 100%
+        height: auto
 

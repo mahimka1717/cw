@@ -1,9 +1,15 @@
+@use 'variables' as *
+@use 'mixins' as *
+
 .donat-component
   margin: 0 0 72px 0
   padding: 0
   display: flex
-  justify-content: flex-start
-  gap: 24px
+  // justify-content: flex-start
+  flex-direction: column
+  // gap: 24px
+  @include mbp-down(md)
+    margin: 0 0 24px 0
 
   svg
     height: auto
@@ -12,11 +18,25 @@
   &[data-id="2"]
     margin-bottom: 0
 
+  &[data-id="6"],
+  &[data-id="7"]
+    @include mbp-down(md)
+      margin-bottom: 0
+
 h3.donat-title
   font-size: 14px !important
   line-height: 14px !important
   font-weight: 600  !important
   margin-bottom: 12px !important
+  padding-right: 194px
+  @include mbp-down(md)
+    padding-right: 0
+
+
+.donat-box
+  display: flex
+  gap: 24px
+  justify-content: space-between
 
 .donat-title
   font-size: 20px
@@ -50,3 +70,8 @@ h3.donat-title
   display: block
   margin: 0 auto
   min-width: 194px
+  @include mbp-down(md)
+    width: 170px
+    height: 170px
+    min-width: 170px
+    margin: unset

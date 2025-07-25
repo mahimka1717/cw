@@ -36,13 +36,45 @@
     font-weight: 400
     line-height: 57px
     letter-spacing: -2.5px
+    @include mbp-down(md)
+        margin-bottom: 24px
+    
 
 .section .graphics
     grid-row: 2 / span 1
 
 .section .inner
-    padding-bottom: 24px
     padding-top: 24px
+    padding-bottom: 24px
+    @include mbp-down(md)
+        // padding-top: 48px
+        padding-bottom: 48px
+
+.section[data-id="3-2"] .inner
+    padding-top: 0px
+    // padding-bottom: 0px
+
+.section[data-id="3-5"] .inner
+    @include mbp-down(md)
+        border-top: 0.5px solid #00f
+        // padding-bottom: 0
+
+.section[data-id="3-9"] .inner
+    @include mbp-down(md)
+        border-top: 0.5px solid #00f
+        padding-bottom: 0
+
+.section[data-id="2-1"] .graphics
+    @include mbp-down(md)
+        width: 100%
+
+.section[data-id="3-9"] .graphics
+    @include mbp-down(md)
+        width: 100vw
+        margin-left: -2rem
+        margin-right: -2rem
+        padding: 2rem
+        margin-top: 24px
 
 .image
     width: 100vw
@@ -57,16 +89,25 @@
         background-image: url('/images/art3_d.jpg')
         width: 100%
         margin-bottom: 24px
+        @include mbp-down(md)
+            width: 100vw
+            margin-left: -2rem
     &[data-id="4"]
         background-image: url('/images/art4_d.jpg')
         width: 100%
         margin-top: 24px
+        @include mbp-down(md)
+            width: 100vw
+            margin-left: -2rem
 
 
 .values
     display: flex
     justify-content: space-around
     margin: 0 0 72px 0
+    @include mbp-down(md)
+        width: 100%
+        margin: 0 0 32px 0
     .value
         div:first-child
             color: rgba(245, 92, 28, 1)

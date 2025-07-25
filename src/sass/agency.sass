@@ -24,6 +24,9 @@
     letter-spacing: -2.5px
     // margin-bottom: 24px
 
+.section[data-id="2-1"] .graphics
+    @include mbp-down(md)
+        width: 100%
 
 .section .graphics
     grid-row: 2 / span 1
@@ -36,6 +39,8 @@
 .values
     display: flex
     justify-content: space-around
+    width: 100%
+
 
     .value
         div:first-child
