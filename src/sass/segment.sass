@@ -7,7 +7,7 @@
         color: $secondary-color
         font-size: 30px
         font-style: normal
-        font-weight: 400
+        font-weight: 600
         line-height: 34px
         letter-spacing: -1.5px
         margin-bottom: 24px
@@ -17,7 +17,7 @@
         font-family: $font-headings
         font-size: 22px
         font-style: normal
-        font-weight: 400
+        font-weight: 600
         line-height: 26px
         margin-top: 0
         margin-bottom: 24px
@@ -28,13 +28,20 @@
             // font-family: $font-primary
             font-size: 18px
             font-style: normal
-            font-weight: 400
+            font-weight: 300
             line-height: 25.2px
             margin-top: unset
             margin-bottom: 8px
+            // -webkit-font-smoothing: antialiased
+            // font-family: Urb, sans-serif
 
     .segment + .segment
         margin-top: 40px
+
+
+    &[data-id="1-1"]
+        h2.title
+            display: none
 
     &[data-id="1-4"],
     &[data-id="1-6"],
