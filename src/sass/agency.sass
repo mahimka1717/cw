@@ -20,7 +20,7 @@
     font-size: 50px
     font-style: normal
     line-height: 57px
-    font-weight: 600
+    font-weight: 400
     letter-spacing: -1.5px
     // margin-bottom: 24px
 
@@ -28,8 +28,16 @@
     @include mbp-down(md)
         width: 100%
 
+.section .content
+    grid-column: 1 / span 5
+    grid-row: 2
+    max-width: 100%
+    
+
 .section .graphics
+    grid-column: 7 / span 6
     grid-row: 2 / span 1
+    max-width: 100%
 
 .section .inner
     padding-bottom: 24px
@@ -48,12 +56,13 @@
             font-family: $font-headings
             font-size: 52px
             font-style: normal
-            font-weight: 600
+            font-weight: 400
             line-height: 52px
             letter-spacing: -2.6px
             text-align: center
             span
                 // font-family: Urbanist
+                font-family: $font-primary
                 font-size: 32px
                 font-style: normal
                 font-weight: 600
@@ -63,6 +72,7 @@
             color: #000
             text-align: center
             // font-family: Urbanist
+            font-family: $font-primary
             font-size: 12px
             font-style: normal
             font-weight: 400

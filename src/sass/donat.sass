@@ -23,14 +23,24 @@
     @include mbp-down(md)
       margin-bottom: 0
 
+
 h3.donat-title
   font-size: 14px !important
   line-height: 14px !important
   font-weight: 600  !important
   margin-bottom: 12px !important
-  padding-right: 194px
+  font-family: $font-primary !important
+  
+
+h3.donat-title-m
+  display: none
   @include mbp-down(md)
-    padding-right: 0
+    display: block
+
+h3.donat-title-d
+  display: block
+  @include mbp-down(md)
+    display: none
 
 
 .donat-box
@@ -65,6 +75,7 @@ h3.donat-title
 .donat-legend__text
   flex: 1
   font-size: 12px
+  font-family: $font-primary
 
 .donat-chart
   display: block
