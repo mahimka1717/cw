@@ -6,7 +6,10 @@
 @use 'list.sass'
 
 
-
+.section[data-id="1-0"]
+    height: 500px 
+    @media (max-width: 600px)
+        height: 240px
 
 
 .section[data-id="1-1"],
@@ -82,7 +85,7 @@
 
     span
         color: #F55C1C
-        font-family: Urbanist
+        font-family: $font-primary
         font-size: 18px
         font-style: normal
         font-weight: 600
@@ -93,7 +96,7 @@
         font-size: smaller
 
 .links
-    grid-column: 1 / span 6
+    grid-column: 1 / span 10
     grid-row: 2
     max-width: 100%
     li

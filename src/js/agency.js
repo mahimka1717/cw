@@ -1,3 +1,13 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { animateDonats } from './donat.js';
+import { animateLineChart } from './linechart.js';
+import { animateMultibar } from './multibar.js';
+
+import { animateList } from './list';
+
+
 import { renderDonatChart } from './donat.js';
 
 import Handlebars from 'handlebars';
@@ -101,3 +111,66 @@ const multybarTemplate = Handlebars.compile('{{> multibar}}');
 
 const htmlMultybar2 = multybarTemplate(multybarData2);
 document.querySelector('.multybar[data-id="2"]').innerHTML = htmlMultybar2;
+
+
+
+
+
+
+
+export function animateValues() {
+  const values = document.querySelectorAll('.value');
+  values.forEach(valBlock => {
+    const numDiv = valBlock.children[0];
+    const textDiv = valBlock.children[1];
+    if (!numDiv || !textDiv) return;
+    gsap.set(textDiv, { opacity: 0, y: 10 });
+    gsap.set(numDiv, { opacity: 0 });
+    let tl = gsap.timeline({ paused: true });
+    // Ищем текстовый узел с числом
+    let numberNode = null;
+    let target = 0;
+    numDiv.childNodes.forEach(node => {
+      if (node.nodeType === 3 && /\d+/.test(node.textContent)) {
+        numberNode = node;
+        const match = node.textContent.match(/\d+/);
+        if (match) target = parseInt(match[0]);
+      }
+    });
+    tl.to(numDiv, {
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+    if (numberNode) {
+      let animObj = { val: 0 };
+      tl.to(animObj, {
+        val: target,
+        duration: 1,
+        ease: 'power2.out',
+        onUpdate: function() {
+          numberNode.textContent = numberNode.textContent.replace(/\d+/, Math.round(animObj.val));
+        }
+      }, '<');
+    }
+    tl.to(textDiv, {
+      opacity: 1,
+      y: 0,
+      duration: 0.75,
+      ease: 'power2.out'
+    }, '-=0.75');
+    ScrollTrigger.create({
+      trigger: valBlock,
+      start: 'top 75%',
+      once: true,
+      onEnter: () => tl.play()
+    });
+  });
+}
+
+
+animateDonats();
+animateMultibar();
+
+animateValues();
+animateList();

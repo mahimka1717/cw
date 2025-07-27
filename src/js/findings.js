@@ -1,3 +1,12 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { animateDonats } from './donat.js';
+import { animateLineChart } from './linechart.js';
+import { animateMultibar } from './multibar.js';
+import { animateList } from './list';
+
+
 import { renderDonatChart } from './donat.js';
 import { renderLineChart } from './linechart.js';
 
@@ -6,6 +15,8 @@ import listTemplateSource from '../hbs/list.hbs?raw';
 import donatTemplateSource from '../hbs/donat.hbs?raw';
 import lineChartTemplateSource from '../hbs/linechart.hbs?raw';
 import multybarTemplateSource from '../hbs/multibar.hbs?raw';
+
+
 
 Handlebars.registerPartial('list', listTemplateSource);
 Handlebars.registerPartial('donat', donatTemplateSource);
@@ -270,3 +281,79 @@ document.querySelector('.linechart[data-id="6"]').innerHTML = htmlLinechart6;
 const multybarTemplate = Handlebars.compile('{{> multibar}}');
 const htmlMultybar1 = multybarTemplate(multybarData1);
 document.querySelector('.multybar[data-id="1"]').innerHTML = htmlMultybar1;
+
+
+
+
+function animateImage(ids = ["2", "3", "4"]) {
+  ids.forEach(id => {
+    document.querySelectorAll(`.image[data-id="${id}"]`).forEach(image => {
+      gsap.set(image, { backgroundSize: '100%' });
+      gsap.to(image, {
+        backgroundSize: '120%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: image,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+    });
+  });
+}
+
+
+
+
+
+
+export function animateValues() {
+  const values = document.querySelectorAll('.value');
+  values.forEach(valBlock => {
+    const numDiv = valBlock.children[0];
+    const textDiv = valBlock.children[1];
+    if (!numDiv || !textDiv) return;
+    gsap.set(textDiv, { opacity: 0, y: 10 });
+    gsap.set(numDiv, { opacity: 0 });
+    let tl = gsap.timeline({ paused: true });
+    const target = parseInt(numDiv.textContent);
+    tl.to(numDiv, {
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+    tl.fromTo(numDiv, {
+      innerText: 0
+    }, {
+      innerText: target,
+      duration: 1,
+      roundProps: 'innerText',
+      onUpdate: function() {
+        numDiv.textContent = Math.round(this.targets()[0].innerText);
+      }
+    }, '<');
+    tl.to(textDiv, {
+      opacity: 1,
+      y: 0,
+      duration: 0.75,
+      ease: 'power2.out'
+    }, '-=0.75');
+    ScrollTrigger.create({
+      trigger: valBlock,
+      start: 'top 75%',
+      once: true,
+      onEnter: () => tl.play()
+    });
+  });
+}
+
+
+animateDonats();
+animateLineChart();
+animateMultibar();
+
+animateValues();
+animateList();
+
+animateImage(["2", "3", "4"])

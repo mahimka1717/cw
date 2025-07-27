@@ -20,10 +20,16 @@
 .section[data-id="3-9"]
     background: #fff
 
+.section[data-id="3-0"]
+    height: 500px 
+    @media (max-width: 600px)
+        height: 240px
+
 
 .graphics[data-id="3-8"]
     padding: 18px
     background: #F2E0CC
+
 
 
 
@@ -66,8 +72,10 @@
         padding-bottom: 48px
 
 .section[data-id="3-2"] .inner
-    padding-top: 0px
+    padding-top: 24px
     // padding-bottom: 0px
+    @include mbp-down(md)
+        padding-top: 0px
 
 .section[data-id="3-5"] .inner
     @include mbp-down(md)
