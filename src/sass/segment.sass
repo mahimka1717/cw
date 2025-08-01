@@ -13,6 +13,8 @@
         letter-spacing: 0px
         margin-bottom: 50px
         min-width: 560px
+        @include mbp-down(lg)
+            min-width: unset
 
 
     h2.title
@@ -44,7 +46,9 @@
             font-weight: 400
             line-height: 24.0px
             margin-top: unset
-            margin-bottom: 8px
+            
+        p + p
+            margin-top: 10px
         
             // -webkit-font-smoothing: antialiased
             // font-family: Urb, sans-serif
@@ -64,7 +68,7 @@
 
     &[data-id="1-6"]
         margin-bottom: 48px
-        @include mbp-down(md)
+        @include mbp-down(lg)
             margin-bottom: 24px
 
     &[data-id="1-2"],
@@ -111,4 +115,6 @@
 
     &[data-id="3-9"]
         .title
-            margin-bottom: 84px
+            margin-bottom: 85px
+            @include mbp-down(lg)
+                margin-bottom: 48px

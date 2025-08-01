@@ -18,9 +18,14 @@
 
     .multibar-box
       flex-direction: row
+      @include mbp-down(md)
+        flex-direction: column
 
       .multibar-legend
         flex-direction: column
+        @include mbp-down(md)
+          flex-direction: row
+          flex-wrap: wrap
 
   &[data-id="2"]
     margin-top: 110px

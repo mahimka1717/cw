@@ -1,3 +1,6 @@
+@use 'variables' as *
+@use 'mixins' as *
+
 .hero-bg-image
   width: 100vw
   height: 500px
@@ -17,4 +20,10 @@
 h1
   grid-column: 1 / span 10
   grid-row: 1
+
+.hero
+  height: 94px
+  @include mbp-down(md)
+    height: 79px
+
 
