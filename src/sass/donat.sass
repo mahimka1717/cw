@@ -2,9 +2,11 @@
 @use 'mixins' as *
 
 .donat-component
+  border-top: 0.5px solid black
   margin: 0 0 72px 0
   padding: 0
   display: flex
+  padding-top: 10px
   // justify-content: flex-start
   flex-direction: column
   // gap: 24px
@@ -15,7 +17,20 @@
     height: auto
 
 
+
+
   &[data-id="2"]
+    margin-bottom: 0
+
+  &[data-id="3"],
+  &[data-id="5"]
+    .donat-box
+      flex-direction: row
+      align-items: center
+    .donat-legend
+      gap: 20px
+
+  &[data-id="5"]
     margin-bottom: 0
 
   &[data-id="6"],
@@ -25,27 +40,16 @@
 
 
 h3.donat-title
-  font-size: 14px !important
-  line-height: 14px !important
-  font-weight: 600  !important
-  margin-bottom: 15px !important
+  font-size: 18px !important
+  line-height: 24px !important
+  font-weight: 600 !important
+  margin-bottom: 30px !important
   font-family: $font-primary !important
   
-
-h3.donat-title-m
-  display: none
-  @include mbp-down(md)
-    display: block
-
-h3.donat-title-d
-  display: block
-  @include mbp-down(md)
-    display: none
-
-
 .donat-box
   display: flex
-  gap: 24px
+  flex-direction: column-reverse
+  gap: 18px
   justify-content: space-between
 
 .donat-title
@@ -56,7 +60,7 @@ h3.donat-title-d
 .donat-legend
   display: flex
   flex-direction: column
-  gap: 24px
+  gap: 12px
   margin-bottom: 16px
   @include mbp-down(md)
     gap: 16px
@@ -69,20 +73,25 @@ h3.donat-title-d
   color: #333
 
 .donat-legend__color
-  width: 12px
-  height: 8px
-  border-radius: 4px
+  width: 20px
+  height: 14px
+  border-radius: 7px
   margin-right: 8px
   display: inline-block
 
+
 .donat-legend__text
   flex: 1
-  font-size: 12px
+  font-size: 14px
   font-family: $font-primary
+  // white-space: nowrap
+
+
+
 
 .donat-chart
   display: block
-  margin: 0 auto
+  // margin: 0 auto
   min-width: 194px
   @include mbp-down(md)
     width: 170px

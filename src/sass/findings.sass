@@ -8,10 +8,19 @@
 @use 'linechart.sass'
 @use 'multibar.sass'
 
+
+
+
+
+         
+
 .section[data-id="3-1"],
-.section[data-id="3-3"],
 .section[data-id="3-6"]
     background: $bg-color
+
+.section[data-id="3-3"]
+    background: #efeded
+
 .section[data-id="3-2"],
 .section[data-id="3-4"],
 .section[data-id="3-5"],
@@ -20,19 +29,27 @@
 .section[data-id="3-9"]
     background: #fff
 
+
+
+
+
+
+
+.section[data-id="3-7"]
+    background: linear-gradient(to right, rgba(20,33,89,0) 0%, rgba(20,33,89,0.2) 20%, #142159 50%), url('/images/rect.jpg') left center no-repeat
+    background-size: 100% 100%, contain
+    background-position: left center, left center
+    background-repeat: no-repeat, no-repeat
+    background-origin: border-box, border-box
+
 .section[data-id="3-0"]
-    height: 500px 
+    height: 500px
     @media (max-width: 600px)
         height: 240px
-
 
 .graphics[data-id="3-8"]
     padding: 18px
     background: #F2E0CC
-
-
-
-
 
 .title
     color: #00F
@@ -44,52 +61,54 @@
     letter-spacing: -1.5px
     @include mbp-down(md)
         margin-bottom: 24px
-    
-
 
 .section .content
     grid-column: 1 / span 5
     grid-row: 2
     max-width: 100%
-    
 
 .section .graphics
     grid-column: 7 / span 6
     grid-row: 2 / span 1
     max-width: 100%
 
-
-
-
-
-
-
 .section .inner
-    padding-top: 24px
-    padding-bottom: 24px
+    padding-bottom: 100px
+    padding-top: 100px
     @include mbp-down(md)
         // padding-top: 48px
         padding-bottom: 48px
 
-.section[data-id="3-2"] .inner
-    padding-top: 24px
+.section[data-id="3-1"] .inner,
+.section[data-id="3-3"] .inner,
+.section[data-id="3-5"] .inner,
+.section[data-id="3-6"] .inner
+    align-items: flex-end
+
+// .section[data-id="3-2"] .inner
+    // padding-top: 24px
     // padding-bottom: 0px
-    @include mbp-down(md)
-        padding-top: 0px
+    // @include mbp-down(md)
+        // padding-top: 0px
 
 .section[data-id="3-5"] .inner
     @include mbp-down(md)
         border-top: 0.5px solid #00f
         // padding-bottom: 0
 
+.section[data-id="3-5"] .graphics,
+.section[data-id="3-6"] .graphics,
+.section[data-id="3-7"] .graphics
+    min-width: 520px
+
 .section[data-id="3-9"] .inner
     @include mbp-down(md)
         border-top: 0.5px solid #00f
         padding-bottom: 0
 
-.section[data-id="2-1"] .graphics
-    @include mbp-down(md)
-        width: 100%
+// .section[data-id="2-1"] .graphics
+//     @include mbp-down(md)
+//         width: 100%
 
 .section[data-id="3-9"] .graphics
     @include mbp-down(md)
@@ -112,7 +131,7 @@
     &[data-id="3"]
         background-image: url('/images/art3_d.jpg')
         width: 100%
-        margin-bottom: 24px
+        margin-bottom: 48px
         @include mbp-down(md)
             width: 100vw
             margin-left: -2rem
@@ -124,11 +143,11 @@
             width: 100vw
             margin-left: -2rem
 
-
 .values
     display: flex
-    justify-content: space-around
-    margin: 0 0 72px 0
+    justify-content: flex-start
+    margin: 0 0 52px 0
+    gap: 20px
     @include mbp-down(md)
         width: 100%
         margin: 0 0 32px 0
@@ -136,12 +155,13 @@
         div:first-child
             color: rgba(245, 92, 28, 1)
             font-family: $font-headings
-            font-size: 52px
+            font-size: 72px
             font-style: normal
             font-weight: 400
-            line-height: 52px
+            line-height: 72px
             letter-spacing: -2.6px
-            text-align: center
+            margin-bottom: -3px
+            // text-align: center
             span
                 // font-family: Urbanist
                 font-family: $font-primary
@@ -151,8 +171,9 @@
                 line-height: 24px
 
         div:last-child
+            border-top: 0.5px solid rgba(245, 92, 28, 1)
             color: #000
-            text-align: center
+            // text-align: center
             // font-family: Urbanist
             font-family: $font-primary
             font-size: 12px
@@ -160,3 +181,46 @@
             font-weight: 400
             line-height: 12px
             width: 106px
+            padding-top: 8px
+
+
+// .values
+//     display: flex
+//     // justify-content: space-around
+//     gap: 10px
+//     width: 100%
+//     min-width: 520px
+//     > *
+//         flex: 1 1 0
+
+//     .value
+//         div:first-child
+//             color: rgba(245, 92, 28, 1)
+//             font-family: $font-primary
+//             font-size: 90px
+//             font-style: normal
+//             font-weight: 600
+//             line-height: 90px
+//             margin-bottom: 10px
+//             // letter-spacing: -2.6px
+//             // text-align: center
+//             span
+//                 // font-family: Urbanist
+//                 font-family: $font-primary
+//                 font-size: 60px
+//                 font-style: normal
+//                 font-weight: 600
+//                 line-height: 24px
+
+//         div:last-child
+//             border-top: 0.5px solid black
+//             padding-top: 10px
+//             color: #000
+//             // text-align: center
+//             // font-family: Urbanist
+//             font-family: $font-primary
+//             font-size: 18px
+//             font-style: normal
+//             font-weight: 600
+//             line-height: 24px
+//             // width: 106px

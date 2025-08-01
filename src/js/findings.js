@@ -32,8 +32,9 @@ Handlebars.registerHelper('percent289', function(val) {
 Handlebars.registerHelper('reverse', function(array) {
   return array.slice().reverse();
 });
-
-
+Handlebars.registerHelper('eq', function(a, b) {
+  return a === b;
+});
 
 
 const listData5 = {
@@ -49,7 +50,7 @@ const listData5 = {
 
 const listData6 = {
     title: "The two priorities for the year ahead:",
-    id: "5",
+    id: "6",
     deviders: true,
     elements: [
         {icon: "icons/icon15.svg", text: "Increase audience engagement"},
@@ -70,16 +71,16 @@ const donatData3 = {
     ]
 }
 
-const donatData4 = {
-    title: "Q. What influences your content strategy the most?",
-    id: "4",
-    elements: [
-        {val: 33, text: "Spend vs impact", color: "#0000FF"},
-        {val: 30, text: "Audience engagement & feedback", color: "#6666FF"},
-        {val: 20, text: "Your sales teams’ needs and influences", color: "#A6A6FF"},
-        {val: 17, text: "Internal senior decision-maker preference", color: "#CCCCFF"},
-    ]
-}
+// const donatData4 = {
+//     title: "Q. What influences your content strategy the most?",
+//     id: "4",
+//     elements: [
+//         {val: 33, text: "Spend vs impact", color: "#0000FF"},
+//         {val: 30, text: "Audience engagement & feedback", color: "#6666FF"},
+//         {val: 20, text: "Your sales teams’ needs and influences", color: "#A6A6FF"},
+//         {val: 17, text: "Internal senior decision-maker preference", color: "#CCCCFF"},
+//     ]
+// }
 
 const donatData5 = {
     title: "Q. Which three metrics are most important to you when measuring content performance?",
@@ -114,17 +115,17 @@ const donatData7 = {
 }
 
 
-const lineChartData1 = {
-    title: "Q. How do you measure content success?",
-    id: "1",
-    elements: [
-        {val: 38, text: "5 (High)", color: "#00f"},
-        {val: 9, text: "4", color: "#66F"},
-        {val: 22, text: "3", color: "#66F"},
-        {val: 16, text: "2", color: "#CFCFFF"},
-        {val: 16, text: "1 (Low)", color: "#F0EDED"}
-    ]
-}
+// const lineChartData1 = {
+//     title: "Q. How do you measure content success?",
+//     id: "1",
+//     elements: [
+//         {val: 38, text: "5 (High)", color: "#00f"},
+//         {val: 9, text: "4", color: "#66F"},
+//         {val: 22, text: "3", color: "#66F"},
+//         {val: 16, text: "2", color: "#CFCFFF"},
+//         {val: 16, text: "1 (Low)", color: "#F0EDED"}
+//     ]
+// }
 
 const lineChartData2 = {
     title: "Q. Rate the effectiveness of your website as a distribution channel",
@@ -196,14 +197,14 @@ const lineChartData6 = {
 
 
 const multybarData1 = {
-    title: "Q. Rate the effectiveness of events as a distribution channel",
+    title: "Q. Rate the effectiveness of your content formats",
     id: "1",
     legend: [
-        {text: "5 (High)", color: "#0000FF"},
+        {text: "5 (Very effective)", color: "#0000FF"},
         {text: "4", color: "#6666FF"},
         {text: "3", color: "#A6A6FF"},
         {text: "2", color: "#CCCCFF"},
-        {text: "1 (Low)", color: "#FFFFFF"},
+        {text: "1 (Not effective)", color: "#FFFFFF"},
         {text: "Don’t produce", color: "#F0EDED"}
     ],
     elements: [
@@ -234,42 +235,42 @@ document.querySelector('.list[data-id="6"]').innerHTML = html6;
 
 const donatTemplate = Handlebars.compile('{{> donat}}');
 const htmlDonat3 = donatTemplate(donatData3);
-const htmlDonat4 = donatTemplate(donatData4);
+// const htmlDonat4 = donatTemplate(donatData4);
 const htmlDonat5 = donatTemplate(donatData5);
-const htmlDonat6 = donatTemplate(donatData6);
+// const htmlDonat6 = donatTemplate(donatData6);
 const htmlDonat7 = donatTemplate(donatData7);
 
 document.querySelector('.donat[data-id="3"]').innerHTML = htmlDonat3;
-document.querySelector('.donat[data-id="4"]').innerHTML = htmlDonat4;
+// document.querySelector('.donat[data-id="4"]').innerHTML = htmlDonat4;
 document.querySelector('.donat[data-id="5"]').innerHTML = htmlDonat5;
-document.querySelector('.donat[data-id="6"]').innerHTML = htmlDonat6;
-document.querySelector('.donat[data-id="7"]').innerHTML = htmlDonat7;
+// document.querySelector('.donat[data-id="6"]').innerHTML = htmlDonat6;
+// document.querySelector('.donat[data-id="7"]').innerHTML = htmlDonat7;
 
 const donatEl3 = document.querySelector('.donat-component[data-id="3"]');
-const donatEl4 = document.querySelector('.donat-component[data-id="4"]');
+// const donatEl4 = document.querySelector('.donat-component[data-id="4"]');
 const donatEl5 = document.querySelector('.donat-component[data-id="5"]');
 const donatEl6 = document.querySelector('.donat-component[data-id="6"]');
-const donatEl7 = document.querySelector('.donat-component[data-id="7"]');
+// const donatEl7 = document.querySelector('.donat-component[data-id="7"]');
 if (donatEl3) renderDonatChart(donatEl3, donatData3);
-if (donatEl4) renderDonatChart(donatEl4, donatData4);
+// if (donatEl4) renderDonatChart(donatEl4, donatData4);
 if (donatEl5) renderDonatChart(donatEl5, donatData5);
 if (donatEl6) renderDonatChart(donatEl6, donatData6);
-if (donatEl7) renderDonatChart(donatEl7, donatData7);
+// if (donatEl7) renderDonatChart(donatEl7, donatData7);
 
 
 
 const linechartTemplate = Handlebars.compile('{{> linechart}}');
-const htmlLinechart1 = linechartTemplate(lineChartData1);
-const htmlLinechart2 = linechartTemplate(lineChartData2);
-const htmlLinechart3 = linechartTemplate(lineChartData3);
+// const htmlLinechart1 = linechartTemplate(lineChartData1);
+// const htmlLinechart2 = linechartTemplate(lineChartData2);
+// const htmlLinechart3 = linechartTemplate(lineChartData3);
 const htmlLinechart4 = linechartTemplate(lineChartData4);
 const htmlLinechart5 = linechartTemplate(lineChartData5);
 const htmlLinechart6 = linechartTemplate(lineChartData6);
 
 
-document.querySelector('.linechart[data-id="1"]').innerHTML = htmlLinechart1;
-document.querySelector('.linechart[data-id="2"]').innerHTML = htmlLinechart2;
-document.querySelector('.linechart[data-id="3"]').innerHTML = htmlLinechart3;
+// document.querySelector('.linechart[data-id="1"]').innerHTML = htmlLinechart1;
+// document.querySelector('.linechart[data-id="2"]').innerHTML = htmlLinechart2;
+// document.querySelector('.linechart[data-id="3"]').innerHTML = htmlLinechart3;
 document.querySelector('.linechart[data-id="4"]').innerHTML = htmlLinechart4;
 document.querySelector('.linechart[data-id="5"]').innerHTML = htmlLinechart5;
 document.querySelector('.linechart[data-id="6"]').innerHTML = htmlLinechart6;

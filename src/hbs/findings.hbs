@@ -2,9 +2,10 @@
 </section>
 
 <section class="section" data-id="3-0">
-    <video bg-src="images/findings_hero_d.jpg" autoplay="" muted="" loop="" id="backgroundvideobcad946d" poster="images/findings_hero_d.jpg" playsinline="true" disablepictureinpicture="true" preload="metadata" class="lazy astro-vnjtzwb2 entered loaded" data-ll-status="loaded">
+      <div class="hero-bg-image" data-id="3"></div>
+    {{!-- <video bg-src="images/findings_hero_d.jpg" autoplay="" muted="" loop="" id="backgroundvideobcad946d" poster="images/findings_hero_d.jpg" playsinline="true" disablepictureinpicture="true" preload="metadata" class="lazy astro-vnjtzwb2 entered loaded" data-ll-status="loaded">
         <source data-src="video/findings.mp4" type="video/mp4" class="astro-vnjtzwb2" src="video/findings.mp4">
-    </video>
+    </video> --}}
 </section>
 
 <section class="section" data-id="3-1">
@@ -13,14 +14,14 @@
         <div class="container">
             <div class="inner">
 
-                <h1 class="title">Key findings from the Global Marketing Leaders Content study</h1>
+         
 
                 <article class="content">
                     {{> segment
                     dataId="3-1"
-                    title="Storytelling for Selling"
+                    h1title="Key findings from the Global Marketing Leaders Content study"
                     size=1
-                    description=""
+                    description="Storytelling for Selling"
                     children='
                     <p>Driving sales is the overwhelming objective of content marketing, according to our survey.</p>
                     <p>For some, that means enabling commercial teams with better tools and narratives. For others, it
@@ -49,7 +50,7 @@
 
                 <article class="content">
 
-                    <div class="image" data-id="3"></div>
+                    
 
                     {{> segment
                     dataId="3-2"
@@ -71,14 +72,22 @@
                 </article>
 
                 <aside class="graphics" data-id="3-2">
+
+                    <div class="image" data-id="3"></div>
+
                     <div class="donat" data-id="3"></div>
-                    <div class="donat" data-id="4"></div>
-                    <div class="linechart" data-id="1"></div>
+                    {{!-- <div class="donat" data-id="4"></div>
+                    <div class="linechart" data-id="1"></div> --}}
                 </aside>
 
             </div>
         </div>
     </div>
+
+
+
+
+
 </section>
 
 <section class="section" data-id="3-3">
@@ -88,9 +97,19 @@
             <div class="inner">
 
                 <article class="content">
+                    <div class="donat" data-id="5"></div>
+                    {{!-- <div class="image" data-id="4"></div> --}}
+                </article>
+
+                <aside class="graphics" data-id="3-3">
+                    
+                    {{!-- <div class="linechart" data-id="2"></div>
+                    <div class="linechart" data-id="3"></div> --}}
+
+
                     {{> segment
                     dataId="3-3"
-                    title="The Metrics Dilemma: Vanity vs Value"
+                    title="The Metrics Dilemma:<br>Vanity vs Value"
                     size=1
                     description=""
                     children='
@@ -102,13 +121,7 @@
                         content ROI. It’s where performance feels tangible, trackable, and tied to actual outcomes.</p>
                     '
                     }}
-                    <div class="image" data-id="4"></div>
-                </article>
 
-                <aside class="graphics" data-id="3-3">
-                    <div class="donat" data-id="5"></div>
-                    <div class="linechart" data-id="2"></div>
-                    <div class="linechart" data-id="3"></div>
                 </aside>
 
             </div>
@@ -116,7 +129,7 @@
     </div>
 </section>
 
-<section class="section" data-id="3-4">
+{{!-- <section class="section" data-id="3-4">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
@@ -154,7 +167,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section class="section" data-id="3-5">
     <div class="wrapper">
@@ -191,6 +204,9 @@
             </div>
         </div>
     </div>
+
+
+
 </section>
 
 <section class="section" data-id="3-6">
@@ -234,10 +250,58 @@
 </section>
 
 <section class="section" data-id="3-7">
-    <div class="image" data-id="2"></div>
+    {{!-- <div class="image" data-id="2"></div> --}}
+
+
+    <div class="wrapper">
+        <div class="background"></div>
+        <div class="container">
+            <div class="inner">
+
+                <article class="content">
+                </article>
+
+                <aside class="graphics" data-id="3-7">
+
+                    {{> segment
+                    dataId="3-7"
+                    title="What’s next?"
+                    size=1
+                    description=""
+                    children='
+                    <p>These insights demonstrate that sales enablement is an acute focus for marketing and
+                        communications teams, as it should be. We read from this that there is broad acceptance these
+                        days that marketing is a critical growth driver even in years like this one when economic
+                        forecasts are being negatively impacted by trade wars.</p>
+                    <p>There was a time when corporate headwinds were met with budget cuts in marketing departments. But
+                        budget constraints did not feature heavily as a challenge in our survey, suggesting that
+                        marketing is now viewed as an important resilience tool. The focus is more on budget
+                        justification and ROI.</p>
+                    <p>What’s less clear, but looming large, is the impact AI will have on content creation itself. </p>
+                    <p>While there was broad agreement that AI will be a game changer in the years ahead, few had strong
+                        evidence of what that will look like, particularly in terms of how it will reshape team
+                        structures, resourcing, and budgets. The direction of travel is clear; the road map is still
+                        being developed.</p>
+
+
+                    '
+                    }}
+
+
+
+
+
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+
+
 </section>
 
-<section class="section" data-id="3-8">
+{{!-- <section class="section" data-id="3-8">
     <div class="wrapper">
         <div class="background"></div>
         <div class="container">
@@ -273,7 +337,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section class="section" data-id="3-9">
     <div class="wrapper">
@@ -283,42 +347,32 @@
 
                 <article class="content">
 
-
-
                     {{> segment
-                    dataId="3-8"
-                    title="What’s next?"
+                    dataId="3-9"
+                    title="Methodology:<br>qualitative, in person surveys"
                     size=1
                     description=""
                     children='
-                    <p>These insights demonstrate that sales enablement is an acute focus for marketing and
-                        communications teams, as it should be. We read from this that there is broad acceptance these
-                        days that marketing is a critical growth driver even in years like this one when economic
-                        forecasts are being negatively impacted by trade wars.</p>
-                    <p>There was a time when corporate headwinds were met with budget cuts in marketing departments. But
-                        budget constraints did not feature heavily as a challenge in our survey, suggesting that
-                        marketing is now viewed as an important resilience tool. The focus is more on budget
-                        justification and ROI.</p>
-                    <p>What’s less clear, but looming large, is the impact AI will have on content creation itself. </p>
-                    <p>While there was broad agreement that AI will be a game changer in the years ahead, few had strong
-                        evidence of what that will look like, particularly in terms of how it will reshape team
-                        structures, resourcing, and budgets. The direction of travel is clear; the road map is still
-                        being developed.</p>
 
+
+                    <div class="linechart" data-id="5"></div>
+              
 
                     '
                     }}
 
 
+
+
                 </article>
 
-                <aside class="graphics" data-id="3-8">
+                <aside class="graphics" data-id="3-9">
 
 
 
                     {{> segment
-                    dataId="3-9"
-                    title="Methodology: qualitative, in person surveys"
+                    dataId="3-10"
+                    title=""
                     size=1
                     description=""
                     children='
@@ -333,7 +387,7 @@
                         </div>
                     </div>
 
-                    <div class="linechart" data-id="5"></div>
+                 
                     <div class="linechart" data-id="6"></div>
 
                     '
@@ -349,4 +403,6 @@
             </div>
         </div>
     </div>
+
+     
 </section>

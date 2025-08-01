@@ -29,15 +29,18 @@ Handlebars.registerHelper('percent289', function(val) {
 Handlebars.registerHelper('reverse', function(array) {
   return array.slice().reverse();
 });
+Handlebars.registerHelper('eq', function(a, b) {
+  return a === b;
+});
 
 const listData4 = {
     title: "To stay relevant and grow one’s value, three areas stand out for internal marketers and external agency teams:",
     id: "4",
     deviders: false,
     elements: [
-        {icon: "/icons/icon9.svg", text: "<b>Content strategy:</b> Not just delivery, but discernmentContent creation and distribution"},
-        {icon: "/icons/icon10.svg", text: "<b>Business fluency:</b> Context is essential to credibility"},
-        {icon: "/icons/icon11.svg", text: "<b>Storytelling:</b> As a tool for clarity and influence"},
+        {icon: "/icons/icon9.svg", text: "<b>Content strategy:</b><br> Not just delivery, but discernment"},
+        {icon: "/icons/icon10.svg", text: "<b>Business fluency:</b><br> Context is essential to credibility"},
+        {icon: "/icons/icon11.svg", text: "<b>Storytelling:</b><br> As a tool for clarity and influence"},
     ]
 }
 

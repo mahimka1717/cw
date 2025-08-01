@@ -18,10 +18,10 @@ const listData1 = {
   id: "1",
   deviders: true,
   elements: [
-    {icon: "/icons/icon1.svg", text: "Experience"},
-    {icon: "/icons/icon1.svg", text: "Expertise"},
-    {icon: "/icons/icon1.svg", text: "Authority"},
-    {icon: "/icons/icon1.svg", text: "Trust"}
+    {icon: "/icons/icon1-1.svg", text: "Experience"},
+    {icon: "/icons/icon1-2.svg", text: "Expertise"},
+    {icon: "/icons/icon1-3.svg", text: "Authority"},
+    {icon: "/icons/icon1-4.svg", text: "Trust"}
     ]
 };
 
@@ -44,10 +44,10 @@ const listData3 = {
     id: "3",
     deviders: true,
     elements: [
-        {icon: "/icons/icon8.svg", text: "What do the machines currently say about your brand?"},
-        {icon: "/icons/icon8.svg", text: "How do they compare you to your competitors?"},
-        {icon: "/icons/icon8.svg", text: "What topics are they connecting you to?"},
-        {icon: "/icons/icon8.svg", text: "Are you providing the content they need to recommend you?"},
+        {icon: "/icons/icon8.svg", text: "<b>What do the machines currently say about your brand?</b>"},
+        {icon: "/icons/icon8.svg", text: "<b>How do they compare you to your competitors?</b>"},
+        {icon: "/icons/icon8.svg", text: "<b>What topics are they connecting you to?</b>"},
+        {icon: "/icons/icon8.svg", text: "<b>Are you providing the content they need to recommend you?</b>"},
     ]
 }
 

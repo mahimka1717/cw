@@ -6,12 +6,21 @@
 <div class="multibar-box">
 
   <div class="multibar-legend">
-    {{#each legend}}
-      <div class="multibar-legend__item">
-        <span class="multibar-legend__color" style="background: {{color}}"></span>
-        <span class="multibar-legend__text">{{text}}</span>
-      </div>
-    {{/each}}
+    {{#if (eq id "1")}}
+      {{#each legend}}
+        <div class="multibar-legend__item">
+          <span class="multibar-legend__color" style="background: {{color}}"></span>
+          <span class="multibar-legend__text">{{text}}</span>
+        </div>
+      {{/each}}
+    {{else}}
+      {{#each (reverse legend)}}
+        <div class="multibar-legend__item">
+          <span class="multibar-legend__color" style="background: {{color}}"></span>
+          <span class="multibar-legend__text">{{text}}</span>
+        </div>
+      {{/each}}
+    {{/if}}
   </div>
   <div class="multibar-list">
     {{#each elements}}
