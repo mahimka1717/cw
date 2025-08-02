@@ -14,6 +14,13 @@
     height: auto
 
 
+  &[data-id="1"],
+  &[data-id="2"]
+    .donat-box
+      @include mbp-down(lg)
+        flex-direction: row
+
+
   &[data-id="2"]
     margin-bottom: 0
 
@@ -22,6 +29,7 @@
     .donat-box
       flex-direction: row
       align-items: center
+
     .donat-legend
       gap: 20px
 

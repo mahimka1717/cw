@@ -23,19 +23,27 @@
     @media (max-width: 600px)
         height: 240px
 
-.title
-    color: #00F
-    font-family: $font-headings
-    font-size: 59.6px
-    font-style: normal
-    line-height: 80px
-    font-weight: 400
-    letter-spacing: 1.86px
+// .title
+//     color: #00F
+//     font-family: $font-headings
+//     font-size: 59.6px
+//     font-style: normal
+//     line-height: 80px
+//     font-weight: 400
+//     letter-spacing: 1.86px
     // margin-bottom: 24px
 
 .section[data-id="2-1"] .graphics
+    @include mbp-down(lg)
+        margin-top: 48px
+        padding-top: 0
     @include mbp-down(md)
         width: 100%
+
+.section[data-id="2-3"] .graphics
+    @include mbp-down(lg)
+        margin-top: 48px
+        padding-top: 0
 
 // .section[data-id="2-2"] .content
 //     grid-column: 1 / span 5
@@ -43,19 +51,37 @@
 .section[data-id="2-3"] .inner
     align-items: flex-end
 
+
+.section .container
+    @include mbp-down(lg)
+        max-width: 600px
+
 .section .content
     grid-column: 1 / span 5
     grid-row: 2
     max-width: 100%
+    width: 100%
 
 .section .graphics
     grid-column: 8 / span 5
     grid-row: 2 / span 1
     max-width: 100%
+    width: 100%
+    @include mbp-down(xl)
+        grid-column: 7 / span 6
+
+
 
 .section .inner
     padding-bottom: 100px
     padding-top: 100px
+    @include mbp-down(lg)
+        display: flex
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        gap: 0
+        padding-top: 48px
+        padding-bottom: 48px
 
 .values
     display: flex
@@ -63,6 +89,8 @@
     gap: 10px
     width: 100%
     min-width: 520px
+    @include mbp-down(xl)
+        min-width: unset
     > *
         flex: 1 1 0
 
@@ -107,5 +135,9 @@
     // align-items: center
     // margin-top: 24px
     margin-bottom: 38px
+    @include mbp-down(xl)
+        min-width: unset
+    @include mbp-down(lg)
+        flex-direction: column
     > *
         flex: 1 1 0

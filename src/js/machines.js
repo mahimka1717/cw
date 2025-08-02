@@ -320,7 +320,7 @@ function animateFormula() {
 
 animateList();
 animateImage(["1"]);
-animateBarchart1();
+// animateBarchart1();
 animateBarchart2();
-initQuotes();
-animateFormula();
+// initQuotes();
+// animateFormula();

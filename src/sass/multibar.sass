@@ -4,13 +4,17 @@
 
 .multybar[data-id="2"]
   min-width: 600px
+  @include mbp-down(xl)
+    min-width: unset
+  @include mbp-down(lg)
+    min-width: unset
 
 
 .multibar-component
   border-top: 0.5px solid black
   margin-bottom: 72px
   padding-top: 10px
-  @include mbp-down(md)
+  @include mbp-down(lg)
     margin: 0 0 24px 0
   
   &[data-id="1"]
@@ -29,7 +33,10 @@
 
   &[data-id="2"]
     margin-top: 110px
-    mrgin-bottom: 0
+    margin-bottom: 0
+    @include mbp-down(lg)
+      margin-top: 48px
+      margin-bottom: 48px
     
 
 h3.multibar-title
