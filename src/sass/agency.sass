@@ -9,49 +9,6 @@
 @use 'multibar.sass'
 
 
-
-
-
-.section[data-id="2-1"],
-.section[data-id="2-3"]
-    background: $bg-color
-.section[data-id="2-2"]
-    background: #fff
-
-.section[data-id="2-0"]
-    height: 500px
-    @media (max-width: 600px)
-        height: 240px
-
-// .title
-//     color: #00F
-//     font-family: $font-headings
-//     font-size: 59.6px
-//     font-style: normal
-//     line-height: 80px
-//     font-weight: 400
-//     letter-spacing: 1.86px
-    // margin-bottom: 24px
-
-.section[data-id="2-1"] .graphics
-    @include mbp-down(lg)
-        margin-top: 48px
-        padding-top: 0
-    @include mbp-down(md)
-        width: 100%
-
-.section[data-id="2-3"] .graphics
-    @include mbp-down(lg)
-        margin-top: 48px
-        padding-top: 0
-
-// .section[data-id="2-2"] .content
-//     grid-column: 1 / span 5
-.section[data-id="2-1"] .inner,
-.section[data-id="2-3"] .inner
-    align-items: flex-end
-
-
 .section .container
     @include mbp-down(lg)
         max-width: 600px
@@ -70,8 +27,6 @@
     @include mbp-down(xl)
         grid-column: 7 / span 6
 
-
-
 .section .inner
     padding-bottom: 100px
     padding-top: 100px
@@ -83,9 +38,46 @@
         padding-top: 48px
         padding-bottom: 48px
 
+
+
+.section[data-id="2-0"]
+    height: 500px
+    @media (max-width: 600px)
+        height: 240px
+
+
+
+.section[data-id="2-1"]
+    background: $bg-color
+.section[data-id="2-1"] .inner
+    align-items: flex-end
+.section[data-id="2-1"] .graphics
+    @include mbp-down(lg)
+        margin-top: 48px
+        padding-top: 0
+    @include mbp-down(md)
+        width: 100%
+
+
+
+.section[data-id="2-2"]
+    background: #fff
+
+
+
+
+.section[data-id="2-3"]
+    background: $bg-color
+.section[data-id="2-3"] .inner
+    align-items: flex-end
+.section[data-id="2-3"] .graphics
+    @include mbp-down(lg)
+        margin-top: 48px
+        padding-top: 0
+
+
 .values
     display: flex
-    // justify-content: space-around
     gap: 10px
     width: 100%
     min-width: 520px
@@ -103,10 +95,7 @@
             font-weight: 600
             line-height: 90px
             margin-bottom: 10px
-            // letter-spacing: -2.6px
-            // text-align: center
             span
-                // font-family: Urbanist
                 font-family: $font-primary
                 font-size: 60px
                 font-style: normal
@@ -117,23 +106,16 @@
             border-top: 0.5px solid black
             padding-top: 10px
             color: #000
-            // text-align: center
-            // font-family: Urbanist
             font-family: $font-primary
             font-size: 18px
             font-style: normal
             font-weight: 600
             line-height: 24px
-            // width: 106px
-
 
 .donats-box
     min-width: 520px
     display: flex
     gap: 20px
-    // justify-content: center
-    // align-items: center
-    // margin-top: 24px
     margin-bottom: 38px
     @include mbp-down(xl)
         min-width: unset
