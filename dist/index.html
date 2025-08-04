@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Mobile Landing</title>
+</head>
+<body>
+  <h1>AI Mobile Landing</h1>
+  <ul>
+    <li><a href="/ai-mobile-agency.html">AI Mobile Agency</a></li>
+    <li><a href="/ai-mobile-findings.html">AI Mobile Findings</a></li>
+    <li><a href="/ai-mobile-machines.html">AI Mobile Machines</a></li>
+  </ul>
+  <script type="text/javascript">
+    const pages = [
+      '/ai-mobile-agency.html',
+      '/ai-mobile-findings.html',
+      '/ai-mobile-machines.html'
+    ];
+    setTimeout(() => {
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = randomPage;
+    }, 60000);
+  </script>
+</body>
+</html>

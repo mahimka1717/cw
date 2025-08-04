@@ -13,8 +13,8 @@ node_modules
 .pnp.js
 
 # Сборка
-dist
-dist-ssr
+# dist
+# dist-ssr
 *.local
 
 # IDE
