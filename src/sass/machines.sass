@@ -250,11 +250,30 @@
     background-repeat: no-repeat
     &[data-id="1"]
         background-image: url('/images/art1_d.jpg')
-    &[data-id="5"]
+    
+    &[data-id="5-1"]
+        background-image: url('/images/frame1.png')
+    &[data-id="5-2"]
+        background-image: url('/images/frame2.png')   
+    &[data-id="5-3"]
+        background-image: url('/images/frame3.png')   
+    
+    &[data-id="5-1"],
+    &[data-id="5-2"],
+    &[data-id="5-3"]
+        position: absolute
         width: 388px
         height: 388px
-        background-image: url('/images/frame.png')
         transform-origin: center center
         @include mbp-down(md)
             width: 300px
             height: 300px
+
+
+.animated-bubbles
+    position: relative
+    width: 388px
+    height: 388px
+    @include mbp-down(md)
+        width: 300px
+        height: 300px

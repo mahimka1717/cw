@@ -9,6 +9,32 @@ import Handlebars from 'handlebars';
 Handlebars.registerPartial('list', listTemplateSource);
 
 
+
+
+
+
+// Обычная floatRandomly для одного элемента
+function floatRandomly(selector) {
+  const el = document.querySelector(selector);
+  const n = 5; // Максимальное смещение в пикселях
+  if (!el) return;
+
+  const animate = () => {
+    gsap.to(el, {
+      x: gsap.utils.random(-n, n),
+      y: gsap.utils.random(-n, n),
+      duration: gsap.utils.random(1.5, 3),
+      ease: "sine.inOut",
+      onComplete: animate
+    });
+  };
+
+  animate();
+}
+
+
+
+
 const animateImage = (ids = ["2", "3", "4"]) => {
   ids.forEach(id => {
     document.querySelectorAll(`.image[data-id="${id}"]`).forEach(image => {
@@ -207,3 +233,7 @@ animateList();
 animateImage(["1"]);
 animateBarchart();
 initQuotes();
+
+  floatRandomly('.image[data-id="5-1"]');
+  floatRandomly('.image[data-id="5-2"]');
+  floatRandomly('.image[data-id="5-3"]');

@@ -70,7 +70,7 @@ const donatData2 = {
 let k = 0.775
 
 const multybarData2 = {
-    title: "Rate your biggest content challenges?",
+    title: "Rate your biggest content challenges",
     id: "2",
     legend: [
         {text: "5 (High)", color: "#0000FF"},
